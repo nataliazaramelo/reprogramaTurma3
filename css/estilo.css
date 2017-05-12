@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*ESTILOS PADRÕES*/
+body{
+	margin: 0;
+	font-family: "Open Sans";
+}
+.container{
+	width: 1140px;
+	margin: 0 auto;
+}
+.linha{
+	display: flex;
+}
+	.linha.espacoEntre{
+		justify-content: space-between;
+	}
+	.linha.alinharVertical{
+		align-items: center;
+	}
+/*:first-child é o primeiro filho*/
+h1:first-child{
+	margin-top: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style-type: none;
+}
+*{
+	color: #292929;
+	box-sizing: border-box;
+}
+.centralizador{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.botao{
+	font-size: 15px;
+    font-weight: bold;
+    padding: 7px 13px;
+    background: white;
+    border: solid 1px #CCC;
+    border-radius: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+.botao .fa{
+	margin-left: 5px;
+}
+.botao .fa:only-child{
+	margin-left: 0px;
+}
+	.botao.amei{
+		background: #672f82;
+	}
+
+	.botao.amei span,
+	.botao.amei .fa{
+		color: rgba(255, 255, 255, 0.92);
+	}
+
+
+body section,
+body main{
+	padding-top: 20px;
+}
+/*FIM ESTILOS PADRÕES*/
+
+
+/*CABEÇALHO*/
+#cabecalho{
+	width: 100%;
+	background-color: #672f82;
+	/*Torna a tag fixa*/
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+#cabecalho a{
+	color: white;
+}
+
+#cabecalho .container{
+	height: 40px;
+}
+
+#cabecalho .fa{
+	color: white;
+}
+
+.menuHorizontal ul{
+	margin: 0;
+	padding: 0;
+}
+.menuHorizontal a{
+	padding: 0 10px;
+}
+.botao.menuHamburger{
+	background: none;
+	display: none;
+}
+/*FIM CABEÇALHO*/
+
+
+/*BANNER*/
+
+#banner{
+	background-image: url(../imgs/banner_background.jpg);
+	background-size: cover;
+	padding-top: 0px;
+}
+#banner .container{
+	height: 100vh;
+}
+
+#slogan *{
+	color: white;
+}
+#slogan h1{
+	height: 81px;
+	width: 500px;
+
+	background: url(../imgs/logo.png) no-repeat;
+	overflow: hidden;
+    text-indent: -999999999999px;
+}
+#slogan h2{
+	text-align: center;
+}
+/*FIM BANNER*/
+
+
+/*VALORES*/
+.card{
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.card .textos{
+	text-align: center;
+}
+.card img{
+	height: 100px;
+}
+/*FIM VALORES*/
+
+
+
+/*TABLET*/
+@media (max-width: 1140px){
+	.container{
+		width: 700px;
+	}
+	#navegacaoPrimaria{
+		display: none;
+	}
+	.botao.menuHamburger{
+		display: block;
+	}
+	.cardContainer{
+		flex-wrap: wrap;
+	}
+	.card{
+		width: 50%;
+	}
+
+}
+/*FIM TABLET*/
+
+
+
+
+/*SMARTPHONE*/
+@media (max-width: 700px){
+	.container{
+		width: 100%;
+	}
+	#slogan h1{
+		width: 300px;
+		background-size: contain;
+		margin: auto;
+	}
+}
+/*FIM SMARTPHONE*/
